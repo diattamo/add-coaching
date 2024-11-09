@@ -1,27 +1,32 @@
-import localFont from "next/font/local";
-import "./globals.css";
+// components/RootLayout.js
 
+import localFont from 'next/font/local';
+import './globals.css';
+
+// Import the Geist Sans and Geist Mono fonts
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+  src: './fonts/GeistVF.woff',
+  variable: '--font-geist-sans',
+  weight: '100 900',
 });
 
+const geistMono = localFont({
+  src: './fonts/GeistMonoVF.woff',
+  variable: '--font-geist-mono',
+  weight: '100 900',
+});
+
+// Metadata for the site
 export const metadata = {
-  title: "ADD Coaching & Facilitation",
-  description: "Life Coaching and Facilitation",
+  title: 'ADD Coaching & Facilitation',
+  description: 'Life Coaching and Facilitation',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-[var(--background)] text-[var(--foreground)]">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`min-h-screen flex flex-col ${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--background)] text-[var(--foreground)]`}
       >
         {children}
       </body>

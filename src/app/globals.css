@@ -1,66 +1,84 @@
+/* globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Primary colors from the logo */
+/* CSS Variables */
 :root {
-  --background: #ffffff; /* White or light background */
-  --foreground: #1C3D2F; /* Dark green foreground from the logo */
+  --background: #ffffff;           /* Light background */
+  --foreground: #1C3D2F;           /* Dark green foreground */
 
-  --primary: #1C3D2F; /* Dark green as the primary color */
-  --primary-foreground: #ffffff; /* White text on primary */
-  --secondary: #F9A723; /* Yellow/Orange for accents */
-  --secondary-foreground: #ffffff; /* White text on secondary */
+  --primary: #1C3D2F;              /* Dark green */
+  --primary-foreground: #ffffff;   /* White on dark green */
+  --secondary: #d69370;            /* Orange */
+  --secondary-foreground: #ffffff; /* White on orange */
 
-  --muted: #f0f0f0; /* Light grey for muted text */
-  --muted-foreground: #1C3D2F; /* Dark green for muted foreground */
-  --border: #dddddd; /* Light grey for borders */
-  --input: #f7f7f7; /* Light grey for inputs */
-  --ring: #1C3D2F; /* Dark green for focus rings */
+  --muted: #f0f0f0;                /* Light grey for muted text */
+  --muted-foreground: #1C3D2F;     /* Dark green for muted text */
+  --border: #dddddd;               /* Light grey for borders */
+  --input: #f7f7f7;                /* Light grey for inputs */
+  --ring: #1C3D2F;                 /* Dark green for focus rings */
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #ffffff; /* Light mode background */
-    --foreground: #1C3D2F; /* Dark green foreground */
+    --background: #ffffff;         /* Light mode background */
+    --foreground: #1C3D2F;         /* Dark green foreground */
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1C3D2F; /* Dark green background */
-    --foreground: #ffffff; /* White foreground for dark mode */
+    --background: #1C3D2F;         /* Dark green background */
+    --foreground: #ffffff;         /* White foreground for dark mode */
 
-    --primary: #F9A723; /* Yellow/Orange for primary in dark mode */
-    --primary-foreground: #1C3D2F; /* Dark green text on primary */
-    --secondary: #1C3D2F; /* Dark green for secondary in dark mode */
-    --secondary-foreground: #ffffff; /* White text on secondary */
-    
-    --muted: #333333; /* Dark grey for muted text */
-    --muted-foreground: #f7f7f7; /* Light grey for muted foreground */
-    --border: #555555; /* Dark grey for borders */
-    --input: #444444; /* Dark grey for inputs */
-    --ring: #F9A723; /* Yellow/Orange for focus rings */
+    --primary: #d69370;            /* Orange for primary in dark mode */
+    --primary-foreground: #1C3D2F; /* Dark green text on orange */
+    --secondary: #1C3D2F;          /* Dark green for secondary in dark mode */
+    --secondary-foreground: #ffffff; /* White text on dark green */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
+/* Base Styles */
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[var(--background)] text-[var(--foreground)];
   }
+}
+
+/* Headings */
+section h1,
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+  color: var(--secondary);
+}
+
+/* Links */
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* Buttons */
+button {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }

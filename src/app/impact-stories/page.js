@@ -2,9 +2,9 @@
 // import Footer from '../components/Footer';
 // import Navbar from '../components/Navbar';
 
-export default function Services() {
+export default function Stories() {
   return (
-    <h1>Services Coming Soon...</h1>
+    <h1>Impact Stories Coming Soon...</h1>
     // <>
     //   <Head>
     //     <title>ADD Coaching & Facilitation</title>

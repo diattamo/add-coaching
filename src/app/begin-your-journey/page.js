@@ -1,6 +1,6 @@
 export default function Contact() {
     return (
-      <h1>Services Coming Soon...</h1>
+      <h1>Contact Coming Soon...</h1>
       // <>
       //   <Head>
       //     <title>ADD Coaching & Facilitation</title>
