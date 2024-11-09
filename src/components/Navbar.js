@@ -69,9 +69,9 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="hidden lg:flex items-center" prefetch={false}>
-          <MountainIcon className="h-8 w-8 text-[var(--secondary)]" />
+          {/* <MountainIcon className="h-8 w-8 text-[var(--secondary)]" /> */}
           <span className="ml-3 text-2xl font-bold text-[var(--secondary)]">
-            ADD Coaching &amp; Facilitation
+            <>Aminata</> <strong>Dia</strong><>tta</>
           </span>
         </Link>
 

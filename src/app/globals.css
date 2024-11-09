@@ -11,7 +11,7 @@
 
   --primary: #1C3D2F;              /* Dark green */
   --primary-foreground: #ffffff;   /* White on dark green */
-  --secondary: #d69370;            /* Orange */
+  --secondary: #DB9B8C;            /* Orange */
   --secondary-foreground: #ffffff; /* White on orange */
 
   --muted: #f0f0f0;                /* Light grey for muted text */
@@ -33,7 +33,7 @@
     --background: #1C3D2F;         /* Dark green background */
     --foreground: #ffffff;         /* White foreground for dark mode */
 
-    --primary: #d69370;            /* Orange for primary in dark mode */
+    --primary: #DB9B8C;            /* Orange for primary in dark mode */
     --primary-foreground: #1C3D2F; /* Dark green text on orange */
     --secondary: #1C3D2F;          /* Dark green for secondary in dark mode */
     --secondary-foreground: #ffffff; /* White text on dark green */
