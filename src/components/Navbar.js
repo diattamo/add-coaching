@@ -4,12 +4,13 @@ import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import NavLinks from './NavLinks';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   useEffect(() => {
     const links = document.querySelectorAll('.link');
@@ -23,10 +24,14 @@ export default function Navbar() {
     });
   }, [pathname]);
 
+  const handleNavLinkClick = () => {
+    setIsSheetOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-[var(--primary)] text-[var(--secondary)] py-4 shadow-md">
       <div className="w-full flex items-center justify-between h-20 px-6">
-        <Sheet>
+        <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="lg:hidden text-[var(--secondary)]">
               <MenuIcon className="h-6 w-6" />
@@ -37,6 +42,7 @@ export default function Navbar() {
             <NavLinks 
               navClass="grid gap-2 py-6"
               linkClass="flex w-full items-center py-2 text-lg font-semibold hover:text-[var(--primary-foreground)] transition-colors"
+              onNavLinkClick={handleNavLinkClick}
             />
           </SheetContent>
         </Sheet>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export default function NavLinks(props) {
-    const { navClass, linkClass } = props;
+    const { navClass, linkClass, onNavLinkClick } = props;
   
     return (
       <nav className={navClass}>
@@ -9,6 +9,7 @@ export default function NavLinks(props) {
           href="/"
           className={linkClass}
           prefetch={false}
+          onClick={onNavLinkClick}
         >
           Home
         </Link>
@@ -16,6 +17,7 @@ export default function NavLinks(props) {
           href="/about"
           className={linkClass}
           prefetch={false}
+          onClick={onNavLinkClick}
         >
           About
         </Link>
@@ -23,6 +25,7 @@ export default function NavLinks(props) {
           href="/coaching-and-facilitation-offerings"
           className={linkClass}
           prefetch={false}
+          onClick={onNavLinkClick}
         >
           Coaching and Facilitation Offerings
         </Link>
@@ -30,6 +33,7 @@ export default function NavLinks(props) {
           href="/impact-stories"
           className={linkClass}
           prefetch={false}
+          onClick={onNavLinkClick}
         >
           Impact Stories
         </Link>
@@ -37,6 +41,7 @@ export default function NavLinks(props) {
           href="/begin-your-journey"
           className={linkClass}
           prefetch={false}
+          onClick={onNavLinkClick}
         >
           Begin Your Journey
         </Link>
