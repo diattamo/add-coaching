@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 export default function Home() {
 	return (
 		<main className='bg-[var(--background)] text-[var(--foreground)] min-h-screen'>
