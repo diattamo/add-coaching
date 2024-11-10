@@ -5,6 +5,7 @@ import './globals.css';
 import Footer from '@/components/Footer';
 import SiteHeader from '@/components/SiteHeader';
 
+
 // Import the Geist Sans and Geist Mono fonts
 const geistSans = localFont({
 	src: './fonts/GeistVF.woff',
