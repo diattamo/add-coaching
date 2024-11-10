@@ -94,3 +94,29 @@ main {
 	flex: 1;
 	flex-direction: column;
 }
+
+.link {
+  position: relative;
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px; /* Adjust thickness here */
+  bottom: -2px; /* Adjust position here */
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out;
+}
+
+.link:hover::after,
+.link:focus::after {
+  width: 100%;
+}
+
+.link.active::after {
+  width: 100%;
+}

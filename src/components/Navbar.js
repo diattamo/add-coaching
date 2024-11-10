@@ -1,54 +1,28 @@
-// components/Navbar.js
+
+"use client"
 import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import NavLinks from './NavLinks';
+import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
-
-function NavLinks(props) {
-  const { navClass, linkClass } = props;
-
-  return (
-    <nav className={navClass}>
-      <Link
-        href="/"
-        className={linkClass}
-        prefetch={false}
-      >
-        Home
-      </Link>
-      <Link
-        href="/about"
-        className={linkClass}
-        prefetch={false}
-      >
-        About
-      </Link>
-      <Link
-        href="/coaching-and-facilitation-offerings"
-        className={linkClass}
-        prefetch={false}
-      >
-        Coaching and Facilitation Offerings
-      </Link>
-      <Link
-        href="/impact-stories"
-        className={linkClass}
-        prefetch={false}
-      >
-        Impact Stories
-      </Link>
-      <Link
-        href="/begin-your-journey"
-        className={linkClass}
-        prefetch={false}
-      >
-        Begin Your Journey
-      </Link>
-    </nav>
-  );
-}
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const links = document.querySelectorAll('.link');
+    console.log(links);
+    links.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }, [pathname]);
+
   return (
     <header className="sticky top-0 z-50 bg-[var(--primary)] text-[var(--secondary)] py-4 shadow-md">
       <div className="w-full flex items-center justify-between h-20 px-6">
@@ -78,7 +52,7 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <NavLinks
           navClass="ml-auto hidden lg:flex gap-6"
-          linkClass="text-lg hover:text-[var(--primary-foreground)] transition-colors"
+          linkClass="text-lg hover:text-[var(--primary-foreground)] transition-colors link"
         />
       </div>
     </header>
