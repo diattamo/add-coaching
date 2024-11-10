@@ -9,45 +9,50 @@
   --background: #ffffff;           /* Light background */
   --foreground: #1C3D2F;           /* Dark green foreground */
 
-  --primary: #1C3D2F;              /* Dark green */
-  --primary-foreground: #ffffff;   /* White on dark green */
-  --secondary: #DB9B8C;            /* Orange */
-  --secondary-foreground: #ffffff; /* White on orange */
+	--primary: #db9b8c; /* Orange */
+	--primary-foreground: #ffffff; /* White on orange */
+	--secondary: #1c3d2f; /* Dark green */
+	--secondary-foreground: #ffffff; /* White on orange */
 
-  --muted: #f0f0f0;                /* Light grey for muted text */
-  --muted-foreground: #1C3D2F;     /* Dark green for muted text */
-  --border: #dddddd;               /* Light grey for borders */
-  --input: #f7f7f7;                /* Light grey for inputs */
-  --ring: #1C3D2F;                 /* Dark green for focus rings */
+	--muted: #f0f0f0; /* Light grey for muted text */
+	--muted-foreground: #1c3d2f; /* Dark green for muted text */
+	--border: #dddddd; /* Light grey for borders */
+	--input: #f7f7f7; /* Light grey for inputs */
+	--ring: #1c3d2f; /* Dark green for focus rings */
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
-    --background: #ffffff;         /* Light mode background */
-    --foreground: #1C3D2F;         /* Dark green foreground */
-  }
-}
+    --background: #1c3d2f;
+    --foreground: #ffffff;
 
-@media (prefers-color-scheme: dark) {
+    --primary: #db9b8c;
+    --primary-foreground: #1c3d2f;
+    --secondary: #1c3d2f;
+    --secondary-foreground: #ffffff;
+  }
+} */
+
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1C3D2F;         /* Dark green background */
-    --foreground: #ffffff;         /* White foreground for dark mode */
+    --background: #1c3d2f;
+    --foreground: #ffffff;
 
-    --primary: #DB9B8C;            /* Orange for primary in dark mode */
-    --primary-foreground: #1C3D2F; /* Dark green text on orange */
-    --secondary: #1C3D2F;          /* Dark green for secondary in dark mode */
-    --secondary-foreground: #ffffff; /* White text on dark green */
+    --primary: #db9b8c;
+    --primary-foreground: #1c3d2f;
+    --secondary: #1c3d2f;
+    --secondary-foreground: #ffffff;
   }
-}
+} */
 
 /* Base Styles */
 @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-[var(--background)] text-[var(--foreground)];
-  }
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-[var(--background)] text-[var(--foreground)];
+	}
 }
 
 /* Headings */
@@ -57,28 +62,35 @@ section h3,
 section h4,
 section h5,
 section h6 {
-  color: var(--secondary);
+	color: var(--secondary);
 }
 
 /* Links */
 a {
-  color: var(--secondary);
-  text-decoration: none;
-  transition: color 0.3s;
+	color: var(--secondary);
+	text-decoration: none;
+	transition: color 0.3s;
 }
 
 a:hover {
-  color: var(--primary);
+	color: var(--primary);
 }
 
 /* Buttons */
 button {
-  background-color: var(--secondary);
-  color: var(--secondary-foreground);
-  transition: background-color 0.3s, color 0.3s;
+	background-color: var(--secondary);
+	color: var(--secondary-foreground);
+	transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
-  background-color: var(--primary);
-  color: var(--primary-foreground);
+	background-color: var(--primary);
+	color: var(--primary-foreground);
+}
+
+/* add styling to make main component flex 1 */
+main {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
 }

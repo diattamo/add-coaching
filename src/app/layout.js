@@ -2,6 +2,8 @@
 
 import localFont from 'next/font/local';
 import './globals.css';
+import SiteHeader from '@/components/SIteHeader';
+import Footer from '@/components/Footer';
 
 // Import the Geist Sans and Geist Mono fonts
 const geistSans = localFont({
@@ -28,7 +30,9 @@ export default function RootLayout({ children }) {
       <body
         className={`min-h-screen flex flex-col ${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--background)] text-[var(--foreground)]`}
       >
-        {children}
+        <SiteHeader />
+          {children}
+        <Footer />
       </body>
     </html>
   );
