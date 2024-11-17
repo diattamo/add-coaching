@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /* eslint-disable react/no-unescaped-entities */
 export default function Home() {
 	return (
@@ -6,7 +8,7 @@ export default function Home() {
 			<section className='py-16 px-8 bg-gray-50 text-[var(--foreground)]'>
 				<div className='container mx-auto flex flex-col md:flex-row items-center'>
 					<div className='md:w-2/3'>
-						<div className='h-64 bg-gray-300 flex items-center justify-center'>
+						<div className='rounded-xl h-64 bg-gray-300 flex items-center justify-center'>
 							<p className='text-xl font-bold'>Simple Image (Community)</p>
 						</div>
 					</div>
@@ -33,7 +35,7 @@ export default function Home() {
 						</p>
 					</div>
 					<div className='md:w-1/3'>
-						<div className='h-64 w-64 bg-gray-300 flex items-center justify-center mx-auto md:ml-auto'>
+						<div className='rounded-xl h-64 w-64 bg-gray-300 flex items-center justify-center mx-auto md:ml-auto'>
 							<p className='text-lg font-bold'>Aminata Portrait</p>
 						</div>
 					</div>
@@ -50,9 +52,11 @@ export default function Home() {
 						Authenticity, sustainability, and long-term development are at the
 						core of our coaching philosophy.
 					</p>
-					<button className='px-6 py-2 bg-[var(--secondary)] text-white font-bold rounded'>
-						View Our Offerings
-					</button>
+					<Link href='/impact-stories'>
+						<button className='px-6 py-2 bg-[var(--secondary)] text-white font-bold rounded'>
+							View Our Offerings
+						</button>
+					</Link>
 				</div>
 			</section>
 		</main>

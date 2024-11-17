@@ -11,7 +11,7 @@ export default function Contact() {
 			  </h1>
 			</div>
 			<div className="md:w-1/2 md:ml-8">
-			  <div className="h-64 bg-gray-300 flex items-center justify-center">
+			  <div className="rounded-xl h-64 bg-gray-300 flex items-center justify-center">
 				<p className="text-lg font-bold">"Community" Image</p>
 			  </div>
 			</div>
@@ -26,19 +26,19 @@ export default function Contact() {
 			</h2>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 			  {/* Offering 1 */}
-			  <div className="h-40 bg-gray-200 flex items-center justify-center">
+			  <div className="rounded-xl h-40 bg-gray-200 flex items-center justify-center">
 				<p className="text-lg font-semibold">Offering #1 Overview</p>
 			  </div>
 			  {/* Offering 2 */}
-			  <div className="h-40 bg-gray-200 flex items-center justify-center">
+			  <div className="rounded-xl h-40 bg-gray-200 flex items-center justify-center">
 				<p className="text-lg font-semibold">Offering #2 Overview</p>
 			  </div>
 			  {/* Offering 3 */}
-			  <div className="h-40 bg-gray-200 flex items-center justify-center">
+			  <div className="rounded-xl h-40 bg-gray-200 flex items-center justify-center">
 				<p className="text-lg font-semibold">Offering #3 Overview</p>
 			  </div>
 			  {/* Offering 4 */}
-			  <div className="h-40 bg-gray-200 flex items-center justify-center">
+			  <div className="rounded-xl h-40 bg-gray-200 flex items-center justify-center">
 				<p className="text-lg font-semibold">Offering #4 Overview</p>
 			  </div>
 			</div>
@@ -49,7 +49,7 @@ export default function Contact() {
 		<section className="py-16 px-8 bg-gray-50">
 		  <div className="container mx-auto flex flex-col md:flex-row items-center">
 			<div className="md:w-1/2">
-			  <div className="h-64 bg-gray-300 flex items-center justify-center">
+			  <div className="rounded-xl h-64 bg-gray-300 flex items-center justify-center">
 				<p className="text-lg font-bold">Photo: Aminata working with people</p>
 			  </div>
 			</div>

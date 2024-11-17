@@ -74,7 +74,7 @@ export default function Stories() {
         <div className="container mx-auto space-y-16">
           {/* Case Study #1 */}
           <div className="flex flex-col md:flex-row items-center md:space-x-8">
-            <div className="w-full md:w-2/3 bg-[var(--secondary)] text-white h-64 flex items-center justify-center mb-6 md:mb-0">
+            <div className="rounded-xl w-full md:w-2/3 bg-[var(--secondary)] text-white h-64 flex items-center justify-center mb-6 md:mb-0">
               <p className="text-xl font-bold text-center">Case Study #1</p>
             </div>
             <div className="w-full md:w-1/3">
@@ -88,7 +88,7 @@ export default function Stories() {
 
           {/* Case Study #2 */}
           <div className="flex flex-col md:flex-row-reverse items-center md:space-x-8">
-            <div className="w-full md:w-2/3 bg-[var(--secondary)] text-white h-64 flex items-center justify-center mb-6 md:mb-0">
+            <div className="rounded-xl w-full md:w-2/3 bg-[var(--secondary)] text-white h-64 flex items-center justify-center mb-6 md:mb-0">
               <p className="text-xl font-bold text-center">Case Study #2</p>
             </div>
             <div className="w-full md:w-1/3">

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import NavLinks from './NavLinks';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 
 export default function Navbar() {
@@ -14,7 +15,6 @@ export default function Navbar() {
 
   useEffect(() => {
     const links = document.querySelectorAll('.link');
-    console.log(links);
     links.forEach(link => {
       if (link.href === window.location.href) {
         link.classList.add('active');
@@ -49,7 +49,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="hidden lg:flex items-center" prefetch={false}>
-          {/* <MountainIcon className="h-8 w-8 text-[var(--secondary)]" /> */}
+          <FlowerImage />
           <span className="ml-3 text-2xl font-bold text-[var(--secondary)]">
             <>Aminata</> <strong>Dia</strong><>tta</>
           </span>
@@ -81,16 +81,14 @@ function MenuIcon(props) {
   );
 }
 
-function MountainIcon(props) {
+function FlowerImage() {
   return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path d="M8 3L12 11L17 6L22 21H2L8 3Z" />
-    </svg>
+    <Image
+      className="w-auto h-auto"
+      src="/green-flower-1.png" 
+      alt="Green Flower" 
+      width={64} 
+      height={64}
+    />
   );
 }

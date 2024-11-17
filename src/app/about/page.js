@@ -28,7 +28,7 @@ export default function About() {
 						</p>
 					</div>
 					<div className='md:w-1/3 md:ml-8'>
-						<div className='h-64 w-64 bg-gray-300 flex items-center justify-center mx-auto md:ml-auto'>
+						<div className='rounded-xl h-64 w-64 bg-gray-300 flex items-center justify-center mx-auto md:ml-auto'>
 							<p className='text-lg font-bold'>"Writing" Portrait</p>
 						</div>
 					</div>
@@ -42,7 +42,7 @@ export default function About() {
 						"Our approach focuses on cultivating authentic, sustainable, and
 						aligned growth through personalized coaching and facilitation."
 					</h3>
-					<div className='bg-gray-200 py-8 px-6 rounded-lg'>
+					<div className='bg-gray-200 py-8 px-6 rounded-xl'>
 						<p className='text-lg leading-relaxed'>
 							Through our structured coaching programs, we empower you to align
 							your actions with your goals, ensuring long-term results and

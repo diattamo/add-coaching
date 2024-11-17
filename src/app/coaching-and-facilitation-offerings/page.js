@@ -18,7 +18,7 @@ export default function Offerings() {
 							</p>
 						</div>
 						<div className="md:w-1/3 md:ml-8">
-							<div className="h-64 bg-gray-300 flex items-center justify-center">
+							<div className="rounded-xl h-64 bg-gray-300 flex items-center justify-center">
 								<p className="text-lg font-bold">Relevant Image</p>
 							</div>
 						</div>
@@ -37,7 +37,7 @@ export default function Offerings() {
 							</p>
 						</div>
 						<div className="md:w-1/3 md:mr-8">
-							<div className="h-64 bg-gray-300 flex items-center justify-center">
+							<div className="rounded-xl h-64 bg-gray-300 flex items-center justify-center">
 								<p className="text-lg font-bold">Relevant Image</p>
 							</div>
 						</div>
@@ -61,7 +61,7 @@ export default function Offerings() {
 							</p>
 						</div>
 						<div className="md:w-1/3 md:ml-8">
-							<div className="h-64 bg-gray-300 flex items-center justify-center">
+							<div className="rounded-xl h-64 bg-gray-300 flex items-center justify-center">
 								<p className="text-lg font-bold">Relevant Image</p>
 							</div>
 						</div>
@@ -80,7 +80,7 @@ export default function Offerings() {
 							</p>
 						</div>
 						<div className="md:w-1/3 md:mr-8">
-							<div className="h-64 bg-gray-300 flex items-center justify-center">
+							<div className="rounded-xl h-64 bg-gray-300 flex items-center justify-center">
 								<p className="text-lg font-bold">Relevant Image</p>
 							</div>
 						</div>
