@@ -2,44 +2,57 @@
 export default function Home() {
 	return (
 		<main className='bg-[var(--background)] text-[var(--foreground)] min-h-screen'>
-			{/* Neutral Background Sections */}
+			{/* Hero Section */}
 			<section className='py-16 px-8 bg-gray-50 text-[var(--foreground)]'>
-				<div className='container mx-auto'>
-					<h1 className='text-5xl font-bold mb-6 text-[var(--secondary)]'>
-						Welcome to ADD Coaching &amp; Facilitation
-					</h1>
-					<p className='text-lg leading-relaxed text-gray-700'>
-						We specialize in building sustainable relationships through life
-						coaching and facilitation. Our goal is to help you cultivate
-						holistic connections and foster growth in both personal and
-						professional spheres.
-					</p>
+				<div className='container mx-auto flex flex-col md:flex-row items-center'>
+					<div className='md:w-2/3'>
+						<div className='h-64 bg-gray-300 flex items-center justify-center'>
+							<p className='text-xl font-bold'>Simple Image (Community)</p>
+						</div>
+					</div>
+					<div className='md:w-1/3 md:ml-8 text-center md:text-left'>
+						<h1 className='text-5xl font-bold mb-4 text-[var(--secondary)]'>
+							Welcome
+						</h1>
+						<p className='text-lg leading-relaxed mb-4'>
+							Cultivating Holistic Connections.
+						</p>
+						<button className='px-6 py-2 bg-[var(--secondary)] text-white font-bold rounded'>
+							Get Started
+						</button>
+					</div>
 				</div>
 			</section>
 
-			<section className='py-16 px-8 bg-gray-50 text-[var(--foreground)]'>
-				<div className='container mx-auto'>
-					<h2 className='text-4xl font-bold mb-6 text-[var(--secondary)]'>
-						Our Services
-					</h2>
-					<p className='text-lg leading-relaxed text-gray-700'>
-						Whether you're looking for personal growth, family reconciliation,
-						or leadership facilitation, we offer a variety of coaching services
-						to meet your needs.
-					</p>
+			{/* Quote Section */}
+			<section className='py-16 px-8 bg-white'>
+				<div className='container mx-auto flex flex-col md:flex-row items-center'>
+					<div className='md:w-2/3'>
+						<p className='text-2xl font-semibold italic mb-6'>
+							"Whether you are seeking systemic change, amplifying community impact, or working towards personal growth, I am here to walk alongside you."
+						</p>
+					</div>
+					<div className='md:w-1/3'>
+						<div className='h-64 w-64 bg-gray-300 flex items-center justify-center mx-auto md:ml-auto'>
+							<p className='text-lg font-bold'>Aminata Portrait</p>
+						</div>
+					</div>
 				</div>
 			</section>
 
-			<section className='py-16 px-8 bg-gray-50 text-[var(--foreground)]'>
+			{/* Why Coaching Section */}
+			<section className='py-16 px-8 bg-gray-50 text-[var(--foreground)] text-center'>
 				<div className='container mx-auto'>
-					<h2 className='text-4xl font-bold mb-6 text-[var(--secondary)]'>
-						Why Choose Us?
+					<h2 className='text-4xl font-bold mb-4 text-[var(--secondary)]'>
+						Why Coaching
 					</h2>
-					<p className='text-lg leading-relaxed text-gray-700'>
-						At ADD Coaching &amp; Facilitation, we emphasize authenticity,
-						sustainability, and long-term development in every relationship we
-						help cultivate.
+					<p className='text-lg leading-relaxed mb-6'>
+						Authenticity, sustainability, and long-term development are at the
+						core of our coaching philosophy.
 					</p>
+					<button className='px-6 py-2 bg-[var(--secondary)] text-white font-bold rounded'>
+						View Our Offerings
+					</button>
 				</div>
 			</section>
 		</main>
