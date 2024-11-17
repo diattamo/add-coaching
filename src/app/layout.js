@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 import Footer from '@/components/Footer';
 import SiteHeader from '@/components/SiteHeader';
+import { initI18n } from '../i18n';
 
 
 // Import the Geist Sans and Geist Mono fonts
@@ -25,7 +26,9 @@ export const metadata = {
 	description: 'Life Coaching and Facilitation',
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children, params }) {
+	await initI18n(); // Initialize translations
+
 	return (
 		<html lang='en' className='bg-[var(--background)] text-[var(--foreground)]'>
 			<body
