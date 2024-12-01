@@ -7,9 +7,10 @@ import NavLinks from './NavLinks';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { useTranslations, useLocale } from 'next-intl';
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 
-
-export default function Navbar() {
+export default function Navbar({ locale }) {
   const pathname = usePathname();
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
@@ -56,6 +57,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
+        <LocaleSwitcher initialLocale={locale}/>
         <NavLinks
           navClass="ml-auto hidden lg:flex gap-6"
           linkClass="text-lg hover:text-[var(--primary-foreground)] transition-colors link"
@@ -85,9 +87,9 @@ function FlowerImage() {
   return (
     <Image
       className="w-auto h-auto"
-      src="/green-flower-1.png" 
-      alt="Green Flower" 
-      width={64} 
+      src="/green-flower-1.png"
+      alt="Green Flower"
+      width={64}
       height={64}
     />
   );

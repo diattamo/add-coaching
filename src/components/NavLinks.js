@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import {useTranslations} from "next-intl";
 
 export default function NavLinks(props) {
     const { navClass, linkClass, onNavLinkClick } = props;
-  
+    const t = useTranslations();
+
     return (
       <nav className={navClass}>
         <Link
@@ -11,7 +13,7 @@ export default function NavLinks(props) {
           prefetch={false}
           onClick={onNavLinkClick}
         >
-          Home
+            {t('home')}
         </Link>
         <Link
           href="/about"
@@ -19,7 +21,7 @@ export default function NavLinks(props) {
           prefetch={false}
           onClick={onNavLinkClick}
         >
-          About
+            {t('about')}
         </Link>
         <Link
           href="/coaching-and-facilitation-offerings"
@@ -27,7 +29,7 @@ export default function NavLinks(props) {
           prefetch={false}
           onClick={onNavLinkClick}
         >
-          Coaching and Facilitation Offerings
+            {t('offerings')}
         </Link>
         <Link
           href="/impact-stories"
@@ -35,7 +37,7 @@ export default function NavLinks(props) {
           prefetch={false}
           onClick={onNavLinkClick}
         >
-          Impact Stories
+            {t('stories')}
         </Link>
         <Link
           href="/begin-your-journey"
@@ -43,7 +45,7 @@ export default function NavLinks(props) {
           prefetch={false}
           onClick={onNavLinkClick}
         >
-          Begin Your Journey
+            {t('begin_journey')}
         </Link>
       </nav>
     );
