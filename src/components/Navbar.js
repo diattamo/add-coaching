@@ -6,11 +6,15 @@ import Link from 'next/link';
 import NavLinks from './NavLinks';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { useTranslations, useLocale } from 'next-intl';
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 
-
-export default function Navbar() {
+export default function Navbar({ locale }) {
   const pathname = usePathname();
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const t = useTranslations();
+
+  console.log(t('why_choose_us'));
 
   useEffect(() => {
     const links = document.querySelectorAll('.link');
@@ -56,6 +60,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
+        <LocaleSwitcher initialLocale={locale}/>
         <NavLinks
           navClass="ml-auto hidden lg:flex gap-6"
           linkClass="text-lg hover:text-[var(--primary-foreground)] transition-colors link"

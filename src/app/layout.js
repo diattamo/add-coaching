@@ -4,7 +4,9 @@ import localFont from 'next/font/local';
 import './globals.css';
 import Footer from '@/components/Footer';
 import SiteHeader from '@/components/SiteHeader';
-import { initI18n } from '../i18n';
+import {NextIntlClientProvider} from 'next-intl';
+import {getLocale, getMessages, setRequestLocale} from 'next-intl/server';
+import {getUserLocale} from "@/lib/locale";
 
 
 // Import the Geist Sans and Geist Mono fonts
@@ -26,18 +28,28 @@ export const metadata = {
 	description: 'Life Coaching and Facilitation',
 };
 
+
+
 export default async function RootLayout({ children, params }) {
-	await initI18n(); // Initialize translations
+	const locale = await getUserLocale();
+	const messages = await getMessages();
+
+	console.log(messages)
 
 	return (
-		<html lang='en' className='bg-[var(--background)] text-[var(--foreground)]'>
-			<body
-				className={`min-h-screen flex flex-col ${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--background)] text-[var(--foreground)]`}
-			>
-				<SiteHeader />
-				{children}
-				<Footer />
-			</body>
-		</html>
+		<NextIntlClientProvider
+			messages={messages} >
+			<html lang={locale} className='bg-[var(--background)] text-[var(--foreground)]'>
+				<body
+					className={`min-h-screen flex flex-col ${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--background)] text-[var(--foreground)]`}
+				>
+					<SiteHeader
+						locale={locale}
+					/>
+					{children}
+					<Footer />
+				</body>
+			</html>
+		</NextIntlClientProvider>
 	);
 }
