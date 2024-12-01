@@ -39,7 +39,6 @@ export default function Navbar({ locale }) {
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="bg-[var(--primary)] text-[var(--secondary)]">
-            <LocaleSwitcher initialLocale={locale}/>
             <NavLinks
               navClass="grid gap-2 py-6"
               linkClass="flex w-full items-center py-2 text-lg font-semibold hover:text-[var(--primary-foreground)] transition-colors"
