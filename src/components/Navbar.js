@@ -7,7 +7,6 @@ import NavLinks from './NavLinks';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { useTranslations, useLocale } from 'next-intl';
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 export default function Navbar({ locale }) {
@@ -40,7 +39,8 @@ export default function Navbar({ locale }) {
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="bg-[var(--primary)] text-[var(--secondary)]">
-            <NavLinks 
+            <LocaleSwitcher initialLocale={locale}/>
+            <NavLinks
               navClass="grid gap-2 py-6"
               linkClass="flex w-full items-center py-2 text-lg font-semibold hover:text-[var(--primary-foreground)] transition-colors"
               onNavLinkClick={handleNavLinkClick}
@@ -55,13 +55,11 @@ export default function Navbar({ locale }) {
             <>Aminata</> <strong>Dia</strong><>tta</>
           </span>
         </Link>
-
-        {/* Desktop Navigation */}
-        <LocaleSwitcher initialLocale={locale}/>
         <NavLinks
           navClass="ml-auto hidden lg:flex gap-6"
           linkClass="text-lg hover:text-[var(--primary-foreground)] transition-colors link"
         />
+        <LocaleSwitcher initialLocale={locale}/>
       </div>
     </header>
   );

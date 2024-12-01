@@ -1,9 +1,12 @@
 {
-    "why_choose_us": "Why Choose Us?",
-    "authenticity_message": "At ADD Coaching & Facilitation, we emphasize authenticity, sustainability, and long-term development in every relationship we help cultivate.",
+  "why_choose_us": "Why Choose Us?",
+  "authenticity_message": "At ADD Coaching & Facilitation, we emphasize authenticity, sustainability, and long-term development in every relationship we help cultivate.",
   "home": "Home",
-    "about": "About",
+  "about": "About",
   "offerings": "Coaching and Facilitation Offerings",
   "stories": "Impact Stories",
-    "begin_journey": "Begin Your Journey"
+  "begin_journey": "Begin Your Journey",
+  "Home": {
+    "quote-1": "Whether you are seeking systemic change, amplifying community impact, or working towards personal growth, I am here to walk alongside you."
   }
+}

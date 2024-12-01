@@ -1,7 +1,10 @@
 import Link from "next/link";
+import {useTranslations} from "next-intl";
 
 /* eslint-disable react/no-unescaped-entities */
 export default function Home() {
+	const t = useTranslations();
+
 	return (
 		<main className='bg-[var(--background)] text-[var(--foreground)] min-h-screen'>
 			{/* Hero Section */}
@@ -31,7 +34,7 @@ export default function Home() {
 				<div className='container mx-auto flex flex-col md:flex-row items-center'>
 					<div className='md:w-2/3'>
 						<p className='text-2xl font-semibold italic mb-6'>
-							"Whether you are seeking systemic change, amplifying community impact, or working towards personal growth, I am here to walk alongside you."
+							{t("Home.quote-1")}
 						</p>
 					</div>
 					<div className='md:w-1/3'>

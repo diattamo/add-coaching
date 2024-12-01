@@ -12,22 +12,21 @@ const LocaleSwitcher = ({initialLocale}) => {
     };
 
     const targetLocale = locales.find((lng) => lng !== currentLocale);
-    console.log(currentLocale);
-    console.log(locales);
-    console.log(targetLocale);
 
     const handleLocaleChange = async () => {
-        // Set the new locale
         await setUserLocale(targetLocale);
         setLocale(targetLocale);
-        console.log(targetLocale);
     };
 
     return (
-        <button onClick={handleLocaleChange} aria-label={`Switch to ${targetLocale}`}>
-      <span style={{fontSize: '1.5rem', cursor: 'pointer'}}>
-        {flags[targetLocale]}
-      </span>
+        <button
+            onClick={handleLocaleChange}
+            className="absolute top-0 right-4 p-0 border-none bg-transparent hover:bg-transparent focus:outline-none cursor-pointer"
+            aria-label={`Switch to ${targetLocale}`}
+        >
+          <span style={{fontSize: '1.5rem', cursor: 'pointer'}}>
+            {flags[targetLocale]}
+          </span>
         </button>
     );
 };

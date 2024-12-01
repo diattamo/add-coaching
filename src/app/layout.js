@@ -5,7 +5,7 @@ import './globals.css';
 import Footer from '@/components/Footer';
 import SiteHeader from '@/components/SiteHeader';
 import {NextIntlClientProvider} from 'next-intl';
-import {getLocale, getMessages, setRequestLocale} from 'next-intl/server';
+import {getMessages} from 'next-intl/server';
 import {getUserLocale} from "@/lib/locale";
 
 
@@ -28,13 +28,9 @@ export const metadata = {
 	description: 'Life Coaching and Facilitation',
 };
 
-
-
 export default async function RootLayout({ children, params }) {
 	const locale = await getUserLocale();
 	const messages = await getMessages();
-
-	console.log(messages)
 
 	return (
 		<NextIntlClientProvider
