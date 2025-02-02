@@ -2,8 +2,13 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 import { Logo } from "@/components/Logo";
+import LetsConnect from "@/components/LetsConnect";
+import {Amplify} from "aws-amplify";
+import outputs from "../../amplify_outputs.json";
 
 export default function Home({ locale }) {
+	console.log("amplify configure");
+	Amplify.configure(outputs);
 	const t = useTranslations();
 
 	return (
@@ -23,16 +28,7 @@ export default function Home({ locale }) {
 						<blockquote className='text-2xl italic text-[var(--secondary)] mb-8'>
 							{t("Home.quote-1")}
 						</blockquote>
-						<div className='max-w-md'>
-							<input
-								type='email'
-								placeholder={t("Home.email_placeholder")}
-								className='px-6 py-3 border-2 text-[var(--secondary)] border-[var(--secondary)] rounded-lg w-full bg-transparent mb-4 placeholder-[var(--secondary)]'
-							/>
-							<button className='px-8 py-3 bg-[var(--secondary)] text-white font-bold rounded-lg hover:bg-[var(--primary)] transition-colors w-full'>
-								{t("Home.keep_me_posted")}
-							</button>
-						</div>
+						<LetsConnect locale={locale}/>
 					</div>
 					<div className='md:w-1/2 hidden md:block h-full' />
 				</div>
