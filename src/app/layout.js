@@ -7,8 +7,6 @@ import SiteHeader from '@/components/SiteHeader';
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import {getUserLocale} from "@/lib/locale";
-import {Amplify} from "aws-amplify";
-import outputs from '/amplify_outputs.json';
 
 
 // Import the Geist Sans and Geist Mono fonts
@@ -30,11 +28,9 @@ export const metadata = {
     description: 'Life Coaching and Facilitation',
 };
 
-
 export default async function RootLayout({children, params}) {
     const locale = await getUserLocale();
     const messages = await getMessages();
-
 
     return (
         <NextIntlClientProvider messages={messages}>
