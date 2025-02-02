@@ -21,7 +21,6 @@ export default function LetsConnect ({ locale }) {
         try {
             await client.models.Email.create({
                 content: emailInput.value,
-                isDone: false
             });
         } catch (error) {
             console.error("Failed to write email", error);
