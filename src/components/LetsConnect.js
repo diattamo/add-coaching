@@ -62,7 +62,7 @@ export default function LetsConnect({ locale }) {
                 {t("Home.lets_connect")}
             </button>
             {submitted && (
-                <p className="mt-4">
+                <p className="italic mt-4">
                     {t("Home.thank_you_message")}
                 </p>
             )}

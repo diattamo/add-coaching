@@ -3,7 +3,7 @@ import Image from "next/image";
 export function Logo() {
     return (
         <Image
-            src="/aminalogo.png"
+            src="/aminatalogo-30.png"
             alt="aminatadiatta"
             width={500}
             height={500}
