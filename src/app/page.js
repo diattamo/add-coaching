@@ -3,11 +3,8 @@ import { useTranslations } from "next-intl";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 import { Logo } from "@/components/Logo";
 import LetsConnect from "@/components/LetsConnect";
-import { Amplify } from "aws-amplify";
-import outputs from "../../amplify_outputs.json";
 
 export default function Home({ locale }) {
-	Amplify.configure(outputs);
 	const t = useTranslations();
 
 	return (
