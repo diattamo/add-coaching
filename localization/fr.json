@@ -10,6 +10,8 @@
         "quote-1": "Que vous cherchiez un changement systémique, que vous amplifiez l'impact communautaire ou que vous travailliez à votre croissance personnelle, je suis là pour marcher à vos côtés.",
         "lets_connect": "Connectons-nous",
         "email_placeholder": "Entrez votre adresse e-mail",
-        "coming_soon": "Bientôt disponible..."
+        "coming_soon": "Bientôt disponible...",
+        "invalid_email": "Veuillez saisir une adresse e-mail valide.",
+        "thank_you_message": "Merci de votre intérêt, je vous contacterai bientôt avec des mises à jour."
     }
 }

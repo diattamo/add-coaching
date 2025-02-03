@@ -10,6 +10,8 @@
     "quote-1": "Whether you are seeking systemic change, amplifying community impact, or working towards personal growth, I am here to walk alongside you.",
     "lets_connect": "Let's Connect",
     "email_placeholder": "Enter your email address",
-    "coming_soon": "Coming Soon..."
+    "coming_soon": "Coming Soon...",
+    "invalid_email": "Please enter a valid email address.",
+    "thank_you_message": "Thank you for showing interest, I will reach out soon with updates."
   }
 }

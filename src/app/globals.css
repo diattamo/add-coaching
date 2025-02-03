@@ -121,3 +121,17 @@ main {
   width: 100%;
 }
 
+.responsive-bg {
+	background-image: url('../../public/addstand.png');
+	background-size: cover;
+	background-position: center;
+}
+
+/* Change background image for mobile screens */
+@media (max-width: 770px) {
+	.responsive-bg {
+		background-image: url('../../public/addstand-mobile.png'); /* Use your mobile image here */
+	}
+}
+
+

@@ -42,12 +42,12 @@ export default async function RootLayout({children, params}) {
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased text-[var(--foreground)]`}>
             <div className="relative flex flex-col min-h-screen">
                 <div
-                    className="fixed inset-0 -z-10"
-                    style={{
-                        backgroundImage: 'url("/addstand.png")',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center'
-                    }}
+                    className="responsive-bg fixed inset-0 -z-10"
+                    // style={{
+                    //     backgroundImage: 'url("/addstand.png")',
+                    //     backgroundSize: 'cover',
+                    //     backgroundPosition: 'center'
+                    // }}
                 />
                 <main className="flex-1 flex items-center">
                     {children}
